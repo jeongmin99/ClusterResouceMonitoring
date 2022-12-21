@@ -1,0 +1,40 @@
+apiVersion: projectcalico.org/v3
+items:
+- apiVersion: projectcalico.org/v3
+  kind: IPPool
+  metadata:
+    creationTimestamp: "2022-10-10T07:21:11Z"
+    name: default-ipv4-ippool
+    resourceVersion: "577"
+    uid: f0c0691e-be33-4030-a182-f44ec30fdda5
+  spec:
+    allowedUses:
+    - Workload
+    - Tunnel
+    blockSize: 26
+    cidr: 192.168.0.0/16
+    ipipMode: Always
+    natOutgoing: true
+    nodeSelector: all()
+    vxlanMode: Never
+    disabled: true
+- apiVersion: projectcalico.org/v3
+  kind: IPPool
+  metadata:
+    creationTimestamp: "2022-11-05T16:57:03Z"
+    name: new-pool
+    resourceVersion: "48247"
+    uid: 52222d45-a9dc-4d07-b2ac-1ef21b6b04a4
+  spec:
+    allowedUses:
+    - Workload
+    - Tunnel
+    blockSize: 26
+    cidr: 10.0.0.0/16
+    ipipMode: Always
+    natOutgoing: true
+    nodeSelector: all()
+    vxlanMode: Never
+kind: IPPoolList
+metadata:
+  resourceVersion: "48351"
